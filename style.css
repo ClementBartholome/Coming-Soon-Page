@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Layout */ 
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background: url(images/bg-pattern-desktop.svg), linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    font-family: 'Josefin Sans', sans-serif;
+    height: 100vh;
+    min-height: 100vh;
+
+  }
+
+main {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.hero-desktop {
+    height: 100vh;
+    width:100%;
+}
+
+.hero-mobile {
+    display: none;
+}
+
+.container {
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+
+.logo {
+    max-width: 150px;
+    margin-top: 3.1rem;
+}
+
+article {
+    margin-top: 7rem;
+}
+
+/* Content */
+
+h2 {
+    font-size:3rem;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    line-height: 3.5rem;
+}
+
+article p {
+    margin: 2rem 0;
+    color: hsl(0, 36%, 70%);
+    line-height: 1.8rem;
+}
+
+.pink-text {
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+}
+
+span {
+    display: block;
+}
+
+/* Form */ 
+
+form {
+    display: flex;
+    width: 100%;
+    border: 1px solid hsl(0, 36%, 90%);
+    border-radius: 2rem;
+    color: hsl(0, 36%, 70%);
+}
+
+input {
+    border:none; 
+    background: none;
+    outline: none;
+    padding: 1rem 0 1rem 1.56rem;
+    color: hsl(0, 36%, 70%);
+    width: 80%;
+}
+
+::placeholder {
+    color: hsl(0, 36%, 70%);
+    opacity: 0.4;
+}
+
+button {
+    background: linear-gradient(90deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 0 5px 20px 3px hsl(0, 80%, 86%);
+    margin-left: auto;
+    width: 20%;
+    cursor: pointer;
+}
+
+.error-msg {
+    margin-top: 0.625rem;
+    color: hsl(0, 36%, 70%);
+}
+
+.icon-error {
+    width: 2rem;
+    height: 2rem;
+    margin: 0.5rem;
+    display: none;
+}
+
+/* Footer */ 
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* Responsive */ 
+
+@media screen and (max-width:970px){
+    html {
+        font-size: 14px;
+    }
+    main {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media screen and (max-width:768px){
+    .container {
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width:576px){
+    main {
+        grid-template: 100px 1fr 1fr / 1fr
+    }
+
+    .logo {
+        position: absolute;
+        grid-area: icon;
+        top: 0%;
+        left: 5%;
+        width: 70%;
+    }
+
+    .hero-desktop {
+        display: none;
+    }
+
+    .hero {
+        grid-row: 2/3;
+    }
+
+    .hero-mobile {
+        display: block;
+        width: 100%;
+        height: 55vh;
+
+    }
+
+    .container {
+        grid-row: 3/3;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    article {
+        margin:1.5rem 2rem;
+    }
+    form {
+        margin: 0 2rem;
+        width:90%;
+    }
+    .attribution {
+        margin-top: 40px;
+    }
+}
