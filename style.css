@@ -51,6 +51,10 @@ article {
 
 /* Content */
 
+img {
+    object-fit: cover;
+}
+
 h2 {
     font-size:3rem;
     letter-spacing: 1rem;
@@ -143,7 +147,7 @@ button {
 
 @media screen and (max-width:576px){
     main {
-        grid-template: 100px 1fr 1fr / 1fr
+        grid-template: 100px 300px 1fr / 1fr
     }
 
     .logo {
