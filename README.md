@@ -20,7 +20,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: https://www.frontendmentor.io/solutions/coming-soon-page-6-SHNTEXOk
 - Live Site URL: https://clementbartholome.github.io/Coming-Soon-Page/
 
 ## Author
